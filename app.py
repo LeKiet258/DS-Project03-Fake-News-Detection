@@ -3,7 +3,6 @@ import numpy as np
 import re
 import joblib
 import requests
-import matplotlib.pyplot as plt
 
 from underthesea import word_tokenize
 
@@ -100,7 +99,7 @@ st.title('FAKE NEWS DETECTION')
 input_text = st.text_area('Enter your text', height = 300)
 
 # Model selection
-selected_model = st.selectbox('Select a model', models.keys())
+selected_model = st.selectbox('Select a model', [key for key in models])
 
 # Process
 if st.button('Submit'):
